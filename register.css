@@ -1,0 +1,298 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-purple: #8b6a8e;
+            --primary-pink: #d97ba6;
+            --text-dark: #4a4a4a;
+            --button-blue: #2196f3;
+            --button-hover: #1976d2;
+            --border-color: #ddd;
+            --bg-purple: #8b6a8e;
+            --error-red: #d32f2f;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #864786 0%, #665061 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            width: 100%;
+            background: white;
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .header-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .header-title .alberba {
+            color: var(--text-dark);
+        }
+
+        .header-title .dental-clinic {
+            color: var(--primary-pink);
+        }
+
+        .back-btn {
+            background: var(--primary-pink);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            opacity: 0.9;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 2rem 2rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .register-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .register-title {
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .register-title h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .title-alberba {
+            color: var(--text-dark);
+        }
+
+        .title-clinic {
+            color: var(--primary-pink);
+        }
+
+        .register-title p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .form-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .form-column {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .required {
+            color: var(--error-red);
+            margin-left: 2px;
+        }
+
+        .input-wrapper {
+            position: relative;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-control::placeholder {
+            color: #999;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--button-blue);
+        }
+
+        .form-control.error {
+            border-color: var(--error-red);
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #666;
+            padding: 4px;
+        }
+
+        .password-toggle:hover {
+            color: var(--text-dark);
+        }
+
+        .error-message {
+            color: var(--error-red);
+            font-size: 0.75rem;
+            margin-top: 0.3rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .register-button {
+            width: 50%;
+            background-color: var(--button-blue);
+            color: white;
+            border: none;
+            padding: 0.9rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin: auto;
+            grid-column: 1 / -1;
+        }
+
+        .register-button:hover {
+            background-color: var(--button-hover);
+        }
+
+        .register-button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            grid-column: 1 / -1;
+        }
+
+        .login-link a {
+            color: var(--button-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        .alert {
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .alert.success {
+            background: #e6f4ea;
+            color: #1b7a2b;
+            border: 1px solid #c7e6cc;
+        }
+        .alert.error {
+            background: #fdecea;
+            color: #a12b2b;
+            border: 1px solid #f3c2c2;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 100px 1rem 2rem 1rem;
+            }
+
+            .register-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-layout {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header {
+                padding: 0.75rem 1rem;
+            }
+
+            .header-title {
+                font-size: 1.1rem;
+            }
+
+            .back-btn {
+                padding: 0.4rem 1rem;
+                font-size: 0.85rem;
+            }
+        }
